@@ -1,0 +1,13 @@
+apt-get install:
+    libportaudio2
+
+pip install
+    jupyterlab
+    ipywidgets
+    ipympl
+    sounddevice
+    matplotlib
+    numpy
+    picamera
+    acoular
+    h5py

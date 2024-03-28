@@ -1,0 +1,5 @@
+Pipfile.lock
+.ipynb_checkpoints
+*.h5
+*.wav
+__pychache__
