@@ -2,4 +2,4 @@ Pipfile.lock
 .ipynb_checkpoints
 *.h5
 *.wav
-__pychache__
+__pycache__

@@ -49,7 +49,7 @@ def PulseWave(npt, fs, freq, amp = 1.0, phase = 0, tshift = 0, width = None):
         
     return gauss*wave
 
-def ChirpWaveLin(npt, fs, freq1, freq2. amp = 1.0):
+def ChirpWaveLin(npt, fs, freq1, freq2, amp = 1.0):
     t = np.linspace(0, npt/fs, npt)
     w = amp*chirp(t, f0=freq1, f1=freq2, t1=npt/fs, method='linear')
     return(w)
