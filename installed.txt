@@ -27,4 +27,30 @@ pip install
 
 jupyter lab --generate-config
 vi /home/user/.jupyter/jupyter_lab_config.py
+	c.ServerApp.ip = '0.0.0.0'
+	
+jupyter lab password -> "soundcam"
 
+jupyter lab automatisch starten:
+	create dir and put file:
+
+	mkdir -p /home/user/.config/systemd/user
+	nano /home/user/.config/systemd/user/jupyter.service
+
+	"""
+	[Unit]
+	Description=Juypyter notebook server
+	After=network.target
+	Wants=default.target
+
+	[Service]
+	WorkingDirectory=/home/user
+	ExecStart=/home/user/.local/bin/jupyter lab --no-browser
+
+	[Install]
+	WantedBy=default.target
+	"""
+
+	systemctl --user daemon-reload
+	systemctl --user enable jupyter.service
+	sudo loginctl enable-linger user
