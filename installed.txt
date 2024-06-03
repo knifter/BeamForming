@@ -1,5 +1,19 @@
+raspi-config
+	enable vnc
+	enable ssh
+	set locate
+
+sudo rm /usr/lib/python3.11/EXTERNALLY-MANAGED
+
+/etc/systemd/timesyncd.conf
+	FallbackNTP=145.18.145.18
+
+in ~:
+    git clone https://github.com/knifter/BeamForming
+
 apt-get install:
     libportaudio2
+    python3-h5py
 
 pip install
     jupyterlab
@@ -10,4 +24,7 @@ pip install
     numpy
     picamera
     acoular
-    h5py
+
+jupyter lab --generate-config
+vi /home/user/.jupyter/jupyter_lab_config.py
+
